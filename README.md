@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next15 Shop
 
-## Getting Started
+A simple **Next.js 15** e-commerce application with public and protected pages.  
+Users can view products, see product details, and add new products after login using **NextAuth.js** and **MongoDB**.
 
-First, run the development server:
+---
+
+## Live Site
+
+[Live Demo on Vercel](YOUR_VERCEL_URL_HERE)
+
+---
+
+## GitHub Repository
+
+[GitHub Repo](YOUR_GITHUB_REPO_LINK_HERE)
+
+---
+
+## Features
+
+- Landing Page with **Hero**, **Product Highlights**, and **Footer**
+- Public Product List Page (`/products`)
+- Product Details Page (`/products/[id]`)
+- Login with **Google** (NextAuth.js)
+- Protected Add Product Page (`/dashboard/add-product`) for authenticated users
+- MongoDB backend to store products
+- Responsive and modern UI using **Tailwind CSS + DaisyUI**
+
+---
+
+## Setup & Installation
+
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/Imranfaraji/Next-shope
+cd next15-task
+
+2.Install dependencies:
+
+npm install
+
+3. Add environment variables in .env.local:
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+MONGODB_URI=your_mongodb_connection_string
+
+
+4. Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+5. Open http://localhost:3000 in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. Routes Summary
+Route	Type	Description
+/	Public	Landing page with Hero, Highlights, Footer
+/login	Public	Login page using NextAuth (Google OAuth)
+/products	Public	List all products
+/products/[id]	Public	Show product details
+/dashboard/add-product	Protected	Add a new product (login required)
+/api/products	API	GET: fetch all products, POST: add new product

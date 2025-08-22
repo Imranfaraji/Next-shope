@@ -24,13 +24,13 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full  bg-white/80 backdrop-blur">
       <nav className="responsive px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Left: Brand */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="h-8 w-8 rounded-2xl bg-gray-900 inline-block" />
-            <span className="text-lg font-semibold">Next15 Shop</span>
+            
+            <span className="text-2xl font-bold italic">Next <span className="text-cyan-400">Shop</span></span>
           </Link>
 
           {/* Desktop Links */}
@@ -38,6 +38,7 @@ export default function Navbar() {
             <NavLink href="/" label="Home" />
             <NavLink href="/products" label="Products" />
             <NavLink href="/login" label="Login" />
+            <NavLink href="/dashboard/add-product" label="Dashboard" />
           </div>
 
           {/* Mobile menu button */}
@@ -56,6 +57,7 @@ export default function Navbar() {
             <NavLink href="/" label="Home" />
             <NavLink href="/products" label="Products" />
             <NavLink href="/login" label="Login" />
+            <NavLink href="/dashboard/add-product" label="Dashboard" />
           </div>
         )}
       </nav>
