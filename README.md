@@ -7,13 +7,13 @@ Users can view products, see product details, and add new products after login u
 
 ## Live Site
 
-[Live Demo on Vercel](YOUR_VERCEL_URL_HERE)
+[Live Demo on Netlify](https://nextshope.netlify.app/)
 
 ---
 
 ## GitHub Repository
 
-[GitHub Repo](YOUR_GITHUB_REPO_LINK_HERE)
+[GitHub Repo](https://github.com/Imranfaraji/Next-shope)
 
 ---
 
