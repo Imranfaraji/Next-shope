@@ -1,5 +1,6 @@
 import { connectDB } from "@/app/lib/mongodb";
-import Product from "@/app/models/Product";
+import Product from "../models/Product";
+
 
 export async function GET() {
   await connectDB();
